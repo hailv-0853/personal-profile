@@ -1,28 +1,41 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from "react";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+import HeaderContainer from "./HeaderContainer";
+import AboutContainer from "./AboutContainer";
+// import FriendContainer from "./FriendContainer";
+import TopNav from "./TopNavContainer";
+
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faEllipsisH,
+  faPlus,
+  faUserCircle,
+  faMobileAlt,
+  faSearch
+} from "@fortawesome/free-solid-svg-icons";
+
+import styled from "styled-components";
+
+library.add(faEllipsisH, faPlus, faUserCircle, faMobileAlt, faSearch);
+
+const AppContainer = styled.div`
+  width: 800px;
+  margin: auto;
+`;
+
+function App() {
+  return (
+    <Router>
+      <TopNav />
+      <AppContainer>
+        <HeaderContainer />
+        <AboutContainer />
+        {/* <FriendContainer /> */}
+      </AppContainer>
+    </Router>
+  );
 }
 
 export default App;
