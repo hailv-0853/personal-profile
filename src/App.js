@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import HeaderContainer from "./HeaderContainer";
 import AboutContainer from "./AboutContainer";
-// import FriendContainer from "./FriendContainer";
+import FriendContainer from "./FriendContainer";
 import TopNav from "./TopNavContainer";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -32,7 +32,7 @@ function App() {
       <AppContainer>
         <HeaderContainer />
         <AboutContainer />
-        {/* <FriendContainer /> */}
+        <FriendContainer />
       </AppContainer>
     </Router>
   );

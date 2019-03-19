@@ -10,6 +10,10 @@ export const TopNavContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 0;
 `;
 
 export const TopNavLeft = styled.div`

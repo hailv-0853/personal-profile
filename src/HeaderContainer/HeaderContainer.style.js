@@ -43,6 +43,7 @@ export const SectionContainer = styled.div`
 
 export const HeaderContainer = styled(SectionContainer)`
   border-radius: 0 0 4px 4px;
+  margin-top: 82px;
 `;
 
 export const HeaderBanner = styled.div`
