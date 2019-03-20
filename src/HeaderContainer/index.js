@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
+import { ROUTES } from "../Routes";
+
 import {
   HeaderBannerContainer,
   HeaderBanner,
@@ -24,7 +26,9 @@ const Header = () => (
     <HeaderBannerContainer>
       <HeaderBanner />
       <UserName>Van Hai Le</UserName>
-      <EditCoverButton>Edit Cover</EditCoverButton>
+      <EditCoverButton>
+        <FontAwesomeIcon icon="camera" /> Edit Cover
+      </EditCoverButton>
       <AvatarContainer>
         <AvatarImage src="https://images.unsplash.com/photo-1551650045-fc958c7b0452?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=500&h=501&fit=crop&ixid=eyJhcHBfaWQiOjF9" />
       </AvatarContainer>
@@ -33,17 +37,23 @@ const Header = () => (
       <LinkList>
         <LinkItem>
           <LinkWrapper>
-            <Link to="/">Timeline</Link>
+            <Link to={ROUTES.USERNAME.TIMELINE}>Timeline</Link>
           </LinkWrapper>
         </LinkItem>
         <LinkItem>
-          <LinkWrapper active>About</LinkWrapper>
+          <LinkWrapper active>
+            <Link to={ROUTES.USERNAME.ABOUT}>About</Link>
+          </LinkWrapper>
         </LinkItem>
         <LinkItem>
-          <LinkWrapper>Friends</LinkWrapper>
+          <LinkWrapper>
+            <Link to={ROUTES.USERNAME.FRIENDS}>Friends</Link>
+          </LinkWrapper>
         </LinkItem>
         <LinkItem>
-          <LinkWrapper>Photos</LinkWrapper>
+          <LinkWrapper>
+            <Link to={ROUTES.USERNAME.PHOTOS}>Photos</Link>
+          </LinkWrapper>
         </LinkItem>
       </LinkList>
       <MenuButton>

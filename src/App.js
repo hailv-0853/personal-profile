@@ -13,12 +13,28 @@ import {
   faPlus,
   faUserCircle,
   faMobileAlt,
-  faSearch
+  faSearch,
+  faGlobe,
+  faComment,
+  faSortUp,
+  faSortDown,
+  faCamera
 } from "@fortawesome/free-solid-svg-icons";
 
 import styled from "styled-components";
 
-library.add(faEllipsisH, faPlus, faUserCircle, faMobileAlt, faSearch);
+library.add(
+  faEllipsisH,
+  faPlus,
+  faUserCircle,
+  faMobileAlt,
+  faSearch,
+  faGlobe,
+  faComment,
+  faSortUp,
+  faSortDown,
+  faCamera
+);
 
 const AppContainer = styled.div`
   width: 800px;

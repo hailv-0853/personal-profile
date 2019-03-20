@@ -24,13 +24,18 @@ export const EditCoverButton = styled.button`
   padding: 8px 16px;
   background-color: ${color.editButtonColor};
   border-radius: 4px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   color: #fff;
   font-family: Roboto, sans-serif;
   position: absolute;
   right: 8px;
   bottom: 8px;
   cursor: pointer;
+  svg {
+    font-size: 24px;
+    margin-right: 8px;
+  }
 `;
 
 export const SectionContainer = styled.div`
@@ -43,7 +48,7 @@ export const SectionContainer = styled.div`
 
 export const HeaderContainer = styled(SectionContainer)`
   border-radius: 0 0 4px 4px;
-  margin-top: 82px;
+  margin-top: 80px;
 `;
 
 export const HeaderBanner = styled.div`
